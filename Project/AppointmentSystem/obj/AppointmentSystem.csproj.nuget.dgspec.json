@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MAN\\Desktop\\Project\\AppointmentSystem\\AppointmentSystem.csproj": {}
+    "C:\\Users\\MAN\\Desktop\\Cet Project\\Project\\Project\\AppointmentSystem\\AppointmentSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MAN\\Desktop\\Project\\AppointmentSystem\\AppointmentSystem.csproj": {
+    "C:\\Users\\MAN\\Desktop\\Cet Project\\Project\\Project\\AppointmentSystem\\AppointmentSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MAN\\Desktop\\Project\\AppointmentSystem\\AppointmentSystem.csproj",
+        "projectUniqueName": "C:\\Users\\MAN\\Desktop\\Cet Project\\Project\\Project\\AppointmentSystem\\AppointmentSystem.csproj",
         "projectName": "AppointmentSystem",
-        "projectPath": "C:\\Users\\MAN\\Desktop\\Project\\AppointmentSystem\\AppointmentSystem.csproj",
+        "projectPath": "C:\\Users\\MAN\\Desktop\\Cet Project\\Project\\Project\\AppointmentSystem\\AppointmentSystem.csproj",
         "packagesPath": "C:\\Users\\MAN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MAN\\Desktop\\Project\\AppointmentSystem\\obj\\",
+        "outputPath": "C:\\Users\\MAN\\Desktop\\Cet Project\\Project\\Project\\AppointmentSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
