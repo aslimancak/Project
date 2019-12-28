@@ -6,9 +6,10 @@ namespace AppointmentSystem.Data
 {
     public class Doctor
     {
+        public int ID { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
-        public Department Department { get; set; }
-        public List<Appointment> Appointments { get; set; }
+        public int DepartmentID { get; set; }
+        
     }
 }
