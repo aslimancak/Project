@@ -23,9 +23,7 @@
         <Label Content="Appointment Date" Name="lblAppointmentDate"/>
         <DatePicker Name="dtpAppointmentDate"/>
 
-        <Button Background="LightSkyBlue" Content="List" Name="btnList" Click="btnList_Click"></Button>
 
-        <DataGrid Name="dgAvailable" Height="311" SelectedCellsChanged="dgAvailable_SelectedCellsChanged"/>
 
     </StackPanel>
 </Window>

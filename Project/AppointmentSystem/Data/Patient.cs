@@ -6,7 +6,7 @@ namespace AppointmentSystem.Data
 {
     public class Patient
     {
-        public string IdentityNo { get; set; }
+        public int ID { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Address { get; set; }
