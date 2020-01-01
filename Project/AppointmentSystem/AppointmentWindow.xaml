@@ -5,9 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppointmentSystem"
         mc:Ignorable="d"
-        Title="AppointmentWindow" Height="450" Width="350">
+        Title="AppointmentWindow" Height="550" Width="450" Background="LightGray">
     <StackPanel Margin="10">
+
         
+        <Label Content="Patient Name" Name="lblName"/>
+        <TextBox Text="" TextWrapping="Wrap" Name="txtPatientName" />
+        <Label Content="Patient Surname" Name="lblSurname"/>
+        <TextBox Text="" TextWrapping="Wrap" Name="txtPatientSurname" />
+
         <Label Content="Polyclinic" Name="polyclinicName"/>
         <ComboBox IsEditable="True" Name="departmantComboBox" >
 
@@ -23,6 +29,8 @@
         <DatePicker Name="dtpAppointmentDate"/>
 
         <Button Background="LawnGreen" Content="Make Appointment" Name="btnSave" Click="Button_Click"/>
+        <Button Background="Red" Content="Delete" Name="btnDelete" Click="btnDelete_Click"></Button>
+        <DataGrid Name="dgAppointments" Height="200" SelectedCellsChanged="dgAppointment_SelectedCellsChanged"/>
 
     </StackPanel>
 </Window>

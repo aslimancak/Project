@@ -91,3 +91,7 @@ C:\Users\MAN\Desktop\Cet Project\Project\Project\AppointmentSystem\obj\Debug\net
 C:\Users\MAN\Desktop\Cet Project\Project\Project\AppointmentSystem\obj\Debug\netcoreapp3.0\AppointmentSystem.dll
 C:\Users\MAN\Desktop\Cet Project\Project\Project\AppointmentSystem\obj\Debug\netcoreapp3.0\AppointmentSystem.pdb
 C:\Users\MAN\Desktop\Cet Project\Project\Project\AppointmentSystem\obj\Debug\netcoreapp3.0\AppointmentSystem.csprojAssemblyReference.cache
+C:\Users\MAN\Desktop\Cet Project\Project\Project\AppointmentSystem\obj\Debug\netcoreapp3.0\MainWindow.g.cs
+C:\Users\MAN\Desktop\Cet Project\Project\Project\AppointmentSystem\obj\Debug\netcoreapp3.0\MainWindow.baml
+C:\Users\MAN\Desktop\Cet Project\Project\Project\AppointmentSystem\obj\Debug\netcoreapp3.0\DoctorPage.g.cs
+C:\Users\MAN\Desktop\Cet Project\Project\Project\AppointmentSystem\obj\Debug\netcoreapp3.0\DoctorPage.baml

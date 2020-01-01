@@ -1,0 +1,23 @@
+﻿<Window x:Class="AppointmentSystem.DoctorPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppointmentSystem"
+        mc:Ignorable="d"
+        Title="DoctorPage" Height="550" Width="450" Background="LightGray">
+    <StackPanel Margin="10">
+
+        <Label Content="Name" Name="lblName"/>
+        <TextBox Text="" TextWrapping="Wrap" Name="txtDoctorName" />
+        <Label Content="Surname" Name="Surname"/>
+        <TextBox Text="" TextWrapping="Wrap" Name="txtDoctorSurname" />
+        <Button Background="LightSkyBlue" Content="List All Appointments" Name="btnUpdate" Click="btnList_Click"></Button>
+        <Button Background="Red" Content="Delete Appointment" Name="btnDelete" Click="btnDelete_Click"></Button>
+
+
+
+        <DataGrid Name="dgAppointmentsList" Height="360" SelectedCellsChanged="dgAppointmentList_SelectedCellsChanged"/>
+
+    </StackPanel>
+</Window>

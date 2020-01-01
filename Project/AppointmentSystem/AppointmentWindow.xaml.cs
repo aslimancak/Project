@@ -71,6 +71,7 @@ namespace AppointmentSystem
         {
             var department = db.Courses.Where(x => x.DepartmentName == departmantComboBox.Text).FirstOrDefault();
             var doctor = db.Doctors.Where(x => ("Dr." + x.Name + " " + x.Surname) == titleComboBox.Text).FirstOrDefault();
+            var patient = db.Patients.Where(x => (x.Name + x.Surname) == (txtPatientName.Text + txtPatientSurname.Text)).FirstOrDefault();
 
 
 
@@ -78,15 +79,59 @@ namespace AppointmentSystem
             appointment.DepartmentID = department.ID;
             appointment.DoctorID = doctor.ID;
             appointment.Timestamp = dtpAppointmentDate.SelectedDate.Value;
+            appointment.PatientID = patient.ID;
             
 
             db.Appointments.Add(appointment);
 
+            Random rnd = new Random();
+            int hour = rnd.Next(9, 18);
             db.SaveChanges();
-            MessageBox.Show("Randevunuz başarıyla kaydedildi.");
+            MessageBox.Show("Randevunuz başarıyla kaydedildi. Randevu saatiniz: " + hour + ":00 Lütfen randevu saatinizi not edin." );
+            LoadAppointments();
 
         }
 
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadAppointments();
+        }
+
+        private void LoadAppointments()
+        {
+            AppointmentSystemDB db = new AppointmentSystemDB();
+            var patient = db.Patients.Where(x => (x.Name + x.Surname) == (txtPatientName.Text + txtPatientSurname.Text)).FirstOrDefault();
+            List<Appointment> appointments = db.Appointments.Where(x => x.PatientID == patient.ID).ToList();
+     
+            dgAppointments.ItemsSource = appointments;
+        }
+
+        private void dgAppointment_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
+        {
+            Appointment appointment = dgAppointments.SelectedItem as Appointment;
+            if (appointment != null)
+            {
+
+            }
+        }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            Appointment appointment = dgAppointments.SelectedItem as Appointment;
+            if (appointment != null)
+            {
+                AppointmentSystemDB db = new AppointmentSystemDB();
+                db.Appointments.Remove(appointment);
+                db.SaveChanges();
+                MessageBox.Show("Randevunuz başarıyla silindi!");
+                LoadAppointments();
+
+            }
+            else
+            {
+                MessageBox.Show("Silmek için randevu seçmelisin!");
+            }
+        }
 
 
     }
