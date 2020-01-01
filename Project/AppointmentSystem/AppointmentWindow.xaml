@@ -7,23 +7,22 @@
         mc:Ignorable="d"
         Title="AppointmentWindow" Height="450" Width="350">
     <StackPanel Margin="10">
-
+        
         <Label Content="Polyclinic" Name="polyclinicName"/>
-        <ComboBox IsEditable="True">
-            <ComboBoxItem>ComboBox Item #1</ComboBoxItem>
-            <ComboBoxItem>ComboBox Item #2</ComboBoxItem>
-            <ComboBoxItem>ComboBox Item #3</ComboBoxItem>
+        <ComboBox IsEditable="True" Name="departmantComboBox" >
+
         </ComboBox>
-        <Label Content="Doctor" Name="lbldoctor"/>
-        <ComboBox IsEditable="True">
-            <ComboBoxItem>ComboBox Item #1</ComboBoxItem>
-            <ComboBoxItem>ComboBox Item #2</ComboBoxItem>
-            <ComboBoxItem>ComboBox Item #3</ComboBoxItem>
+        <Button Background="LightSkyBlue" Content="Update" Name="btnUpdate" Click="btnUpdate_Click"></Button>
+
+        <Label Content="Doctor" Name="lbldoctor" />
+        <ComboBox IsEditable="True" Name="titleComboBox">
+            
         </ComboBox>
+        
         <Label Content="Appointment Date" Name="lblAppointmentDate"/>
         <DatePicker Name="dtpAppointmentDate"/>
 
-
+        <Button Background="LawnGreen" Content="Make Appointment" Name="btnSave" Click="Button_Click"/>
 
     </StackPanel>
 </Window>
