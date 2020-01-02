@@ -39,7 +39,7 @@ namespace AppointmentSystem
             if (departmantComboBox.SelectedIndex != -1)
             {
 
-                if (departmantComboBox.Text == "Pediatrics")
+                if (departmantComboBox.Text == "Pediyatri")
                 {
 
                     IQueryable<Doctor> doctors = db.Doctors.Where(x => x.DepartmentID == 1).Select(x => x);
@@ -51,7 +51,7 @@ namespace AppointmentSystem
                     }
                 }
 
-                if (departmantComboBox.Text == "Gynaecology ")
+                if (departmantComboBox.Text == "Jinekoloji")
                 {
                     IQueryable<Doctor> doctors = db.Doctors.Where(x => x.DepartmentID == 2).Select(x => x);
 

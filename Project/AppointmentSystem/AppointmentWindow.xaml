@@ -9,27 +9,27 @@
     <StackPanel Margin="10">
 
         
-        <Label Content="Patient Name" Name="lblName"/>
+        <Label Content="Hasta İsmi" Name="lblName"/>
         <TextBox Text="" TextWrapping="Wrap" Name="txtPatientName" />
-        <Label Content="Patient Surname" Name="lblSurname"/>
+        <Label Content="Hasta Soyismi" Name="lblSurname"/>
         <TextBox Text="" TextWrapping="Wrap" Name="txtPatientSurname" />
 
-        <Label Content="Polyclinic" Name="polyclinicName"/>
+        <Label Content="Poliklinik" Name="polyclinicName"/>
         <ComboBox IsEditable="True" Name="departmantComboBox" >
 
         </ComboBox>
-        <Button Background="LightSkyBlue" Content="Update" Name="btnUpdate" Click="btnUpdate_Click"></Button>
+        <Button Background="LightSkyBlue" Content="Doktorları Listele" Name="btnUpdate" Click="btnUpdate_Click"></Button>
 
-        <Label Content="Doctor" Name="lbldoctor" />
+        <Label Content="Doktor" Name="lbldoctor" />
         <ComboBox IsEditable="True" Name="titleComboBox">
             
         </ComboBox>
         
-        <Label Content="Appointment Date" Name="lblAppointmentDate"/>
+        <Label Content="Randevu Tarihi" Name="lblAppointmentDate"/>
         <DatePicker Name="dtpAppointmentDate"/>
 
-        <Button Background="LawnGreen" Content="Make Appointment" Name="btnSave" Click="Button_Click"/>
-        <Button Background="Red" Content="Delete" Name="btnDelete" Click="btnDelete_Click"></Button>
+        <Button Background="LawnGreen" Content="Randevu Al" Name="btnSave" Click="Button_Click"/>
+        <Button Background="Red" Content="Sil" Name="btnDelete" Click="btnDelete_Click"></Button>
         <DataGrid Name="dgAppointments" Height="200" SelectedCellsChanged="dgAppointment_SelectedCellsChanged"/>
 
     </StackPanel>

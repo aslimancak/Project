@@ -8,12 +8,12 @@
         Title="DoctorPage" Height="550" Width="450" Background="LightGray">
     <StackPanel Margin="10">
 
-        <Label Content="Name" Name="lblName"/>
+        <Label Content="İsim" Name="lblName"/>
         <TextBox Text="" TextWrapping="Wrap" Name="txtDoctorName" />
-        <Label Content="Surname" Name="Surname"/>
+        <Label Content="Soyisim" Name="Surname"/>
         <TextBox Text="" TextWrapping="Wrap" Name="txtDoctorSurname" />
-        <Button Background="LightSkyBlue" Content="List All Appointments" Name="btnUpdate" Click="btnList_Click"></Button>
-        <Button Background="Red" Content="Delete Appointment" Name="btnDelete" Click="btnDelete_Click"></Button>
+        <Button Background="LightSkyBlue" Content="Randevuları Listele" Name="btnUpdate" Click="btnList_Click"></Button>
+        <Button Background="Red" Content="Randevuyu Sil" Name="btnDelete" Click="btnDelete_Click"></Button>
 
 
 

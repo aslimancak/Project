@@ -15,7 +15,7 @@
 
         <StackPanel Margin="10,64,-10,214" RenderTransformOrigin="0.52,0.359">
 
-            <TextBlock Margin="75,79,75,329" Height="21" Width="240"><Bold>Welcome to The Appointment System</Bold></TextBlock>
+            <TextBlock Margin="75,79,75,329" Height="21" Width="240"><Bold>Randevu Alma Sistemine Hoşgeldiniz</Bold></TextBlock>
         </StackPanel>
 
         <StackPanel Margin="71,189,71,27">
