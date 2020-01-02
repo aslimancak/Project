@@ -26,6 +26,9 @@ namespace AppointmentSystem
         {
             InitializeComponent();
 
+            // poliklinikleri databaseden alir ve foreach döngüsüyle comboboxa ekler
+            // hepsini almak icin foreach kullandım, foreach databasede bulunan nesne sayısı kadar işlemi tekrar ediyor
+
             foreach (Department department in db.Courses)
             {
                 departmantComboBox.Items.Add(department.DepartmentName);
@@ -39,8 +42,11 @@ namespace AppointmentSystem
             if (departmantComboBox.SelectedIndex != -1)
             {
 
-                if (departmantComboBox.Text == "Pediyatri")
+                if (departmantComboBox.Text == "Pediyatri") // departmanComboBox.Text secilen polikliniğin textini alıyor.
                 {
+                    // IQuerable bizim ödevlerde kullandığımız list yapısına benziyor. internetten buldum.
+                    // Departman id si 1 e eşit olan doktorları tutuyor.
+                    // Sonradan bu doktorları 2. comboboxa ekliyorum.
 
                     IQueryable<Doctor> doctors = db.Doctors.Where(x => x.DepartmentID == 1).Select(x => x);
 
@@ -62,13 +68,15 @@ namespace AppointmentSystem
                     }
 
                 }
-                titleComboBox.Items.Refresh();
+                titleComboBox.Items.Refresh(); // kutucuğu yeniliyor.
             }
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e) //randevu almak icin kullandığım fonsiyon
         {
+            // kutucuğa yazılan bilgileri alarak databaseden ilgili objeleri buldum ve var türünde oluşturduğum değişkenlere atadım.
+
             var department = db.Courses.Where(x => x.DepartmentName == departmantComboBox.Text).FirstOrDefault();
             var doctor = db.Doctors.Where(x => ("Dr." + x.Name + " " + x.Surname) == titleComboBox.Text).FirstOrDefault();
             var patient = db.Patients.Where(x => (x.Name + x.Surname) == (txtPatientName.Text + txtPatientSurname.Text)).FirstOrDefault();
@@ -84,6 +92,8 @@ namespace AppointmentSystem
 
             db.Appointments.Add(appointment);
 
+            // random sayı oluşturma kodunu internetten aldım.
+
             Random rnd = new Random();
             int hour = rnd.Next(9, 18);
             db.SaveChanges();
@@ -92,10 +102,7 @@ namespace AppointmentSystem
 
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            LoadAppointments();
-        }
+       
 
         private void LoadAppointments()
         {
@@ -106,15 +113,8 @@ namespace AppointmentSystem
             dgAppointments.ItemsSource = appointments;
         }
 
-        private void dgAppointment_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
-        {
-            Appointment appointment = dgAppointments.SelectedItem as Appointment;
-            if (appointment != null)
-            {
-
-            }
-        }
-
+      
+        // asağıdaki fonksiyonu HW4 ü kullanarak oluşturdum. 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
             Appointment appointment = dgAppointments.SelectedItem as Appointment;

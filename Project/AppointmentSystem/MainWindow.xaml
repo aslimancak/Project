@@ -11,7 +11,7 @@
 
     <Grid>
 
-        <Image Height="102" Margin="168,22,168,0" VerticalAlignment="Top" Source="C:\Users\MAN\Desktop\logo.png"/>
+        <Image Height="102" Margin="168,22,168,0" VerticalAlignment="Top" Source="C:\Users\MAN\Desktop\Cet Project\Project\Project\AppointmentSystem\Images\logo.png"/>
 
         <StackPanel Margin="10,64,-10,214" RenderTransformOrigin="0.52,0.359">
 

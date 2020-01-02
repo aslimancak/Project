@@ -17,7 +17,7 @@
 
 
 
-        <DataGrid Name="dgAppointmentsList" Height="360" SelectedCellsChanged="dgAppointmentList_SelectedCellsChanged"/>
+        <DataGrid Name="dgAppointmentsList" Height="360"/>
 
     </StackPanel>
 </Window>

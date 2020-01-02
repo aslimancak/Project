@@ -12,6 +12,8 @@ namespace AppointmentSystem.Data
         public DbSet<Department> Courses { get; set; }
         public DbSet<Doctor> Doctors { get; set; }
         public DbSet<Patient> Patients { get; set; }
+
+        // kalan kısım HW4 ile aynıdır
         public AppointmentSystemDB() : base()
         {
 

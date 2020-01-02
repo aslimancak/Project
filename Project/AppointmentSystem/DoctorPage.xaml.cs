@@ -22,6 +22,7 @@ namespace AppointmentSystem
     public partial class DoctorPage : Window
     {
         AppointmentSystemDB db = new AppointmentSystemDB();
+        
         public DoctorPage()
         {
             InitializeComponent();
@@ -34,6 +35,11 @@ namespace AppointmentSystem
 
         private void LoadAppointments()
         {
+            // databaseden ismi girilen doktora ait randevulari almak icin internetten buldugum lambda expression kullandim. 
+            // lambda expression sql deki sorgu ifadelerine benzer.
+            // once ismi girilen doktoru buluyorum.
+            // randevudaki doktor id si ismi girilen doktorun id si ile ayni ise randevu randevu listesine eklenir.
+
             var doctor = db.Doctors.Where(x => (x.Name + x.Surname) == (txtDoctorName.Text + txtDoctorSurname.Text)).FirstOrDefault();
 
             List<Appointment> appointments = db.Appointments.Where(x => x.DoctorID == doctor.ID).ToList();
@@ -43,22 +49,14 @@ namespace AppointmentSystem
 
         }
 
-        private void dgAppointmentList_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
-        {
-            Appointment appointment = dgAppointmentsList.SelectedItem as Appointment;
-            if (appointment != null)
-            {
-
-            }
-        }
-
+        // asagidaki fonksiyonu HW4 referans alarak olusturdum
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
             Appointment appointment = dgAppointmentsList.SelectedItem as Appointment;
             if (appointment != null)
             {
-                AppointmentSystemDB db = new AppointmentSystemDB();
+               
                 db.Appointments.Remove(appointment);
                 db.SaveChanges();
                 MessageBox.Show("Randevu başarıyla silindi!");

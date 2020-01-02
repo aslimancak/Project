@@ -30,7 +30,7 @@
 
         <Button Background="LawnGreen" Content="Randevu Al" Name="btnSave" Click="Button_Click"/>
         <Button Background="Red" Content="Sil" Name="btnDelete" Click="btnDelete_Click"></Button>
-        <DataGrid Name="dgAppointments" Height="200" SelectedCellsChanged="dgAppointment_SelectedCellsChanged"/>
+        <DataGrid Name="dgAppointments" Height="200" />
 
     </StackPanel>
 </Window>
